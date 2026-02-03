@@ -1,0 +1,11 @@
+(venv) C:\Dheer_\IOT-ML-Spoilage-Prediction->C:/Dheer_/IOT-ML-Spoilage-Prediction-/venv/Scripts/python.exe c:/Dheer_/IOT-ML-Spoilage-Prediction-/src/train_model.py
+Index(['Fruit', 'Temp', 'Humid (%)', 'Light (Fux)', 'CO2 (pmm)', 'Class'], dtype='str')
+Accuracy: 0.9799909049567985
+              precision    recall  f1-score   support
+
+           0       0.97      0.99      0.98      1034
+           1       0.99      0.97      0.98      1165
+
+    accuracy                           0.98      2199
+   macro avg       0.98      0.98      0.98      2199
+weighted avg       0.98      0.98      0.98      2199

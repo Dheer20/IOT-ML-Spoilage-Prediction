@@ -1,5 +1,5 @@
-from io_utils import load_pickle
-from preprocess import preprocess_data
+from src.io_utils import load_pickle
+from src.preprocess import preprocess_data
 import pandas as pd
 import numpy as np
 
@@ -39,7 +39,7 @@ def predict_spoilage (sensor_data,fruit):
     elif p_bad < 0.75:
         status = "Warning"
     else:
-        status = "Spoiled"
+        status = "Urgent"
 
     # calculating spoilage risk by using probabilty of bad
     spoilage_risk = int(p_bad * 100)

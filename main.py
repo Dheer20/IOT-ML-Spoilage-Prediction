@@ -1,11 +1,13 @@
 from src.prediction import predict_spoilage 
+from src.fetch_sensor import *
 
-sensor_data = {
-    "temperature":34,
-    "humidity":20,
-    "light" : 30
-}
+serial = open_serial("COM4")
 
-results = predict_spoilage(sensor_data = sensor_data)
+while True:
 
-print(results)
+ 
+    sensor_data = get_sensor_data(serial)
+    if sensor_data:
+        results = predict_spoilage(sensor_data = sensor_data,fruit="Banana")
+
+        print(results)

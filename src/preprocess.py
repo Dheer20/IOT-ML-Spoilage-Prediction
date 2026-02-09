@@ -32,7 +32,7 @@ def clean_dataset(dataset):
 
 def preprocess_data(sensor_data,fruit,scaler,fruit_encoder):
 
-    fruit_encoded = fruit_encoder.transform(fruit)
+    fruit_encoded = fruit_encoder.transform([fruit])[0]
 
     X = pd.DataFrame(
         [[
@@ -44,4 +44,4 @@ def preprocess_data(sensor_data,fruit,scaler,fruit_encoder):
         columns = ["Temp","Humid (%)","Light (Fux)","Fruit_encoded"]
     )
     # scaling the inputs before giving them as inputs
-    return scaler.tranform(X)
+    return scaler.transform(X)

@@ -7,7 +7,8 @@ def open_serial(COM):
         port=COM,
         baudrate=115200,
         timeout=1,
-    )
+        )
+            
     time.sleep(2)
     ser.reset_input_buffer()
     return ser
